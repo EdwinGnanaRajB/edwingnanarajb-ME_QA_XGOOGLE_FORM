@@ -86,13 +86,13 @@ public class TestCases {
                     "//*[normalize-space(text()) = 'What was the date 7 days ago?']/ancestor::div[4]//input[@class='whsOnd zHQkBf']"),
                     calculateDateTimeToString("dd/MM/yyyy", 6.048e8));
 
-            // Provide the current time in the required time fields.
+            // Enter the specific time expected in the assignment: 07:30.
             writeText(driver, By.xpath(
                     "(//*[normalize-space(text()) = 'What is the time right now?']/ancestor::div[4]//input[@class='whsOnd zHQkBf'])[1]"),
-                    calculateDateTimeToString("HH", 0));
+                    "07");
             writeText(driver, By.xpath(
                     "(//*[normalize-space(text()) = 'What is the time right now?']/ancestor::div[4]//input[@class='whsOnd zHQkBf'])[2]"),
-                    calculateDateTimeToString("mm", 0));
+                    "30");
 
             // Submit the form and verify the completion message.
             driver.findElement(By.xpath("//*[normalize-space(text())='Submit']/ancestor::div[1]")).click();
